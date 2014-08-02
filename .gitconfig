@@ -1,0 +1,8 @@
+[user]
+	email = john@johndietrick.com
+	name = John R Dietrick
+[color]
+	diff = auto
+[alias]
+	oldest-ancestor = !bash -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+	ssv = "log --no-merges --pretty=format:\"\\\"%h\\\";%an;%ai;%ct;\\\"%s\\\"\""
