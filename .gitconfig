@@ -11,3 +11,4 @@
 	lg1a = !"git lg1 --all"
 	lg2a = !"git lg2 --all"
 	lg = !"git lg1"
+	fap = fetch --all --prune
