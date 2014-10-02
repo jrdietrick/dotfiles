@@ -1,3 +1,8 @@
+if [ `uname` = "Linux" ]; then
+    export PATH=$PATH:/home/john/devel/adt/sdk/platform-tools:/home/john/devel/adt/sdk/tools
+    alias git='LC_ALL=en_US.utf8 git'
+fi
+
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
 }
