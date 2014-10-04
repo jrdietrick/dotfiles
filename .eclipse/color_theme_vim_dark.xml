@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="230" name="Vim dark" modified="2011-02-15 11:27:13" author="Kralos">
+    <searchResultIndication color="#555500" />
+    <filteredSearchResultIndication color="#555500" />
+    <occurrenceIndication color="#005555" />
+    <writeOccurrenceIndication color="#005555" />
+    <findScope color="#222222" />
+    <deletionIndication color="#FF5555" />
+    <sourceHoverBackground color="#000000" />
+    <singleLineComment color="#55FFFF" />
+    <multiLineComment color="#55FFFF" />
+    <commentTaskTag color="#55FFFF" bold="true" />
+    <javadoc color="#55FFFF" bold="false" />
+    <javadocLink color="#55FFFF" bold="false" underline="true" strikethrough="false" />
+    <javadocTag color="#55FFFF" bold="true" />
+    <javadocKeyword color="#55FFFF" bold="true" />
+    <class color="#BBBBBB" bold="false" underline="false" strikethrough="false" />
+    <interface color="#BBBBBB" />
+    <method color="#BBBBBB" />
+    <methodDeclaration color="#BBBBBB" />
+    <bracket color="#FF5555" bold="false" />
+    <number color="#FF55FF" />
+    <string color="#FF55FF" />
+    <operator color="#FFFF55" bold="false" />
+    <keyword color="#55FF55" bold="false" />
+    <annotation color="#5555FF" />
+    <staticMethod color="#BBBBBB" />
+    <localVariable color="#55FFFF" />
+    <localVariableDeclaration color="#FFFF55" />
+    <field color="#BBBBBB" />
+    <staticField color="#BBBBBB" />
+    <staticFinalField color="#BBBBBB" />
+    <deprecatedMember color="#FF5555" underline="false" strikethrough="true" />
+    <enum color="#55FF55" />
+    <inheritedMethod color="#BBBBBB" />
+    <abstractMethod color="#BBBBBB" />
+    <parameterVariable color="#55FFFF" />
+    <typeArgument color="#FF55FF" bold="false" />
+    <typeParameter color="#FF55FF" />
+    <constant color="#BBBBBB" />
+    <background color="#000000" />
+    <currentLine color="#222222" />
+    <foreground color="#BBBBBB" />
+    <lineNumber color="#BBBBBB" />
+    <selectionBackground color="#BBBBBB" />
+    <selectionForeground color="#000000" />
+</colorTheme>
