@@ -1,0 +1,9 @@
+diff --git eclipse.ini eclipse.ini
+index 98f3b2f..a218b8b 100644
+--- eclipse.ini
++++ eclipse.ini
+@@ -15,3 +15,4 @@ openFile
+ -XX:MaxPermSize=256m
+ -Xms512m
+ -Xmx1024m
++-Dorg.eclipse.swt.browser.DefaultType=mozilla
