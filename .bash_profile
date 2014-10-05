@@ -3,6 +3,8 @@ if [ `uname` = "Linux" ]; then
     alias git='LC_ALL=en_US.utf8 git'
 fi
 
+alias acat='adb logcat -C -v time -s'
+
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
 }
