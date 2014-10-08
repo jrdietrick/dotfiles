@@ -1,5 +1,6 @@
+export PATH=$PATH:$HOME/devel/adt/sdk/platform-tools:$HOME/devel/adt/sdk/tools
+
 if [ `uname` = "Linux" ]; then
-    export PATH=$PATH:/home/john/devel/adt/sdk/platform-tools:/home/john/devel/adt/sdk/tools
     alias git='LC_ALL=en_US.utf8 git'
 fi
 
