@@ -5,7 +5,7 @@
 # - Empty lines and lines beginning with a '#' are ignored.
 
 # Please provide your Jabber (XMPP) identifier:
-set jid = john@gatherhealth.com
+#set jid = john@gatherhealth.com
 
 # If password is not given, it will be interactively asked for.
 # Note: if the password contains leading or trailing spaces, you must
@@ -14,13 +14,13 @@ set jid = john@gatherhealth.com
 
 # You can provide a server name if you want mcabber to connect
 # to a specific server.
-set server = talk.google.com
+#set server = talk.google.com
 
 # To automatically append the server to the JID in say_to, use this option:
 #set default_server = jabber.org
 
 # If port is not given, mcabber will try to find it out.
-set port = 5223
+#set port = 5223
 
 # If you don't know what a resource is, do not set it.
 # Set disable_random_resource to 1 if you don't want mcabber to add a random
@@ -33,14 +33,14 @@ set resource = mcabber
 
 # Set 'ignore_self_presence' to 1 if you do not want to see your own
 # presence in your roster (default: 0).
-set ignore_self_presence = 0
+set ignore_self_presence = 1
 
 # SSL/TLS options:
 # TLS is now regarded as the default encryption for connecting to jabber.
 # You can require TLS by setting tls to 1.  If your jabber server
 # still doesn't support TLS, you can use the old-style SSL by setting
 # ssl to 1.  It's not possible to use old-style SSL and TLS together.
-set ssl = 1
+#set ssl = 1
 #set tls = 1
 # Moreover, it's possible to check whether the fingerprint of the
 # ssl certificate matches ssl_fingerprint.
@@ -156,7 +156,7 @@ set cmdhistory_lines = 250
 # are used at startup time.
 set logging = 1
 set load_logs = 1
-set logging_dir = ~/.mcabber/history/
+#set logging_dir = ~/.mcabber/history/
 #set logging_ignore_status = 1
 
 # Set log_muc_conf to 1 to enable MUC chatrooms logging (default = 0)
@@ -408,21 +408,21 @@ set escdelay = 50
 # readmark:   text color of the "read mark" line in buffers
 # timestamp:  text color in the chat window for delayed timestamps
 #
-#set color_background   = black
+set color_background   = default
 #set color_general      = white
 #set color_info         = white
-#set color_msgin        = white
-#set color_msgout       = cyan
+set color_msgin        = brightcyan
+set color_msgout       = brightgreen
 #set color_msghl        = yellow
 #set color_bgstatus     = blue
 #set color_status       = white
 #set color_log          = white
 #set color_roster       = green
 #set color_bgrostersel  = cyan
-#set color_rostersel    = blue
+set color_rostersel    = brightwhite
 #set color_rosterselmsg = red
 #set color_rosternewmsg = red
-#set color_readmark     = red
+set color_readmark     = brightblue
 #set color_timestamp    = brightblue
 
 # You can color roster items by their status and JID.  For example, to have
@@ -431,18 +431,14 @@ set escdelay = 50
 #
 #color roster * * white
 #color roster adn *@jabber.org yellow
-color roster * * white
-color roster o * brightwhite
-color roster * *@gatherhealth.com green
-color roster o *@gatherhealth.com brightgreen
-color roster an *@gatherhealth.com brightyellow
-color roster d *@gatherhealth.com brightred
+color roster * * black
+color roster o * green
 
 # You can let mcabber color nicks in MUC.
 # These colors will by used automatically:
-#set nick_colors = red green blue
+set nick_colors = brightred brightblue brightcyan brightyellow brightmagenta
 # This turns coloring of all mucs on:
-#color muc * on
+color muc * on
 #
 # If you want someone's nick to be the same all the time:
 #color mucnick my_friend yellow

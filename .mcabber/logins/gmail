@@ -1,0 +1,9 @@
+set jid = j.r.dietrick@gmail.com
+set server = talk.google.com
+set port = 5223
+set ssl = 1
+set logging_dir = ~/.mcabber/history/gmail
+color roster o * brightgreen
+color roster an * brightyellow
+color roster d * brightred
+set hook-post-connect = roster display od
