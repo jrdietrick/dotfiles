@@ -2,6 +2,8 @@ export PATH=$PATH:$HOME/devel/adt/sdk/platform-tools:$HOME/devel/adt/sdk/tools
 
 if [ `uname` = "Linux" ]; then
     alias git='LC_ALL=en_US.utf8 git'
+    alias gatherxmpp='~/.mcabber/log.sh gather'
+    alias gmailxmpp='~/.mcabber/log.sh gmail'
 fi
 
 alias acat='adb logcat -C -v time -s'

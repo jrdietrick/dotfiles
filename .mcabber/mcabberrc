@@ -306,7 +306,7 @@ set max_history_blocks = 8
 # (command, message, move in the buddylist...).  Note: auto-away only changes
 # the status when it is "available" (online) or "free_for_chat".
 # See 'message_autoaway' below.
-set autoaway = 1800
+#set autoaway = 1800
 
 # Message blocking
 # Set 'block_unsubscribed' to 1 if you want to block (drop) incoming
