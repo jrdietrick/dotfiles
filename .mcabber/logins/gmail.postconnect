@@ -2,4 +2,4 @@ roster group_next
 group fold
 group unfold Friends
 roster group_next
-roster display ofda
+roster display _ofda
