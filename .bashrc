@@ -4,6 +4,10 @@ alias git='LC_ALL=en_US.utf8 git'
 alias gatherxmpp='~/.mcabber/log.sh gather'
 alias gmailxmpp='~/.mcabber/log.sh gmail'
 
+alias gr='grep -Ir'
+alias gri='grep -Iir'
+alias acat='adb logcat -C -v time -s'
+
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
 }

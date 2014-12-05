@@ -6,6 +6,8 @@ if [ `uname` = "Linux" ]; then
     alias gmailxmpp='~/.mcabber/log.sh gmail'
 fi
 
+alias gr='grep -Ir'
+alias gri='grep -Iir'
 alias acat='adb logcat -C -v time -s'
 
 function parse_git_dirty {
