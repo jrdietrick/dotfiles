@@ -14,3 +14,5 @@
 	lg3a = !"git lg3 --all"
 	lg = !"git lg1"
 	fap = fetch --all --prune
+[push]
+	default = simple
