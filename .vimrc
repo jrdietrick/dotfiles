@@ -14,4 +14,4 @@ set list listchars=tab:→\ ,trail:·                          " Show unwanted w
 autocmd BufWritePre *.py,*.java,*.cpp,*.c :%s/\s\+$//e      " Trim unwanted whitespace on save
 
 colors evening
-
+hi Normal ctermbg=none
