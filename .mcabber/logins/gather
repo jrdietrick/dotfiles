@@ -1,10 +1,11 @@
-set jid = john@gatherhealth.com
-set server = talk.google.com
-set port = 5223
-set ssl = 1
+set jid = john@talk.gatherhealth.com
+set server = SERVER_ADDRESS
+set port = SERVER_PORT
+set tls = 1
+set ssl_ignore_checks = 1
 set logging_dir = ~/.mcabber/history/gather
-color roster * *@gatherhealth.com white
-color roster o *@gatherhealth.com brightgreen
-color roster an *@gatherhealth.com brightyellow
-color roster d *@gatherhealth.com brightred
-set hook-post-connect = room join private-chat-900122a7-ac5d-42a7-aea7-576544a127a3@groupchat.google.com
+color roster * *@talk.gatherhealth.com white
+color roster o *@talk.gatherhealth.com brightgreen
+color roster an *@talk.gatherhealth.com brightyellow
+color roster d *@talk.gatherhealth.com brightred
+color roster * *@conference.gatherhealth.com brightwhite
