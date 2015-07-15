@@ -17,3 +17,5 @@
 	fpush = push --force-with-lease
 [push]
 	default = simple
+[core]
+	editor = vim
