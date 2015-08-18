@@ -1,0 +1,6 @@
+user_pref("browser.startup.homepage", "http://www.wsj.com/|https://portfolio.wsj.com/portfolio_login|file:///home/john/devel/personal/journ/build/html/index.html");
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"PanelUI-contents\":[\"edit-controls\",\"zoom-controls\",\"new-window-button\",\"privatebrowsing-button\",\"save-page-button\",\"print-button\",\"history-panelmenu\",\"fullscreen-button\",\"find-button\",\"preferences-button\",\"add-ons-button\",\"developer-button\"],\"addon-bar\":[\"addonbar-closebutton\",\"status-bar\"],\"PersonalToolbar\":[\"personal-bookmarks\"],\"nav-bar\":[\"urlbar-container\",\"search-container\",\"bookmarks-menu-button\",\"pocket-button\",\"downloads-button\",\"home-button\",\"loop-button\",\"mproxy-element-button\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"toolbar-menubar\":[\"menubar-items\"]},\"seen\":[],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\"],\"currentVersion\":4,\"newElementCount\":0}");
+user_pref("intl.accept_languages", "en-us,en,zh-cn,zh-sg,zh,zh-tw,zh-hk");
+user_pref("network.proxy.no_proxies_on", "localhost, 127.0.0.1, 192.168.0.0/24, 192.168.1.0/24");
+user_pref("network.proxy.socks_remote_dns", true);
+user_pref("spellchecker.dictionary", "en-US");
