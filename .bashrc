@@ -1,9 +1,11 @@
 PATH=$PATH:/home/john/devel/adt/sdk/platform-tools:/home/john/devel/adt/sdk/tools
 export PATH
 
-alias git='LC_ALL=en_US.utf8 git'
-alias gatherxmpp='~/.mcabber/log.sh gather'
-alias gmailxmpp='~/.mcabber/log.sh gmail'
+if [ `uname` = "Linux" ]; then
+    alias git='LC_ALL=en_US.utf8 git'
+    alias gatherxmpp='~/.mcabber/log.sh gather'
+    alias gmailxmpp='~/.mcabber/log.sh gmail'
+fi
 
 alias gr='grep -Ir'
 alias gri='grep -Iir'
