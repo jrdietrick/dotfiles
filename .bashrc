@@ -1,4 +1,4 @@
-PATH=$PATH:/home/john/devel/adt/sdk/platform-tools:/home/john/devel/adt/sdk/tools
+PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 export PATH
 
 if [ `uname` = "Linux" ]; then
