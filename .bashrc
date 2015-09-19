@@ -10,6 +10,7 @@ fi
 alias gr='grep -Ir'
 alias gri='grep -Iir'
 alias acat='adb logcat -C -v time -s'
+alias prettyprint_json='python -m json.tool'
 
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
