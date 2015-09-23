@@ -29,3 +29,9 @@ function mount_protected_cifs_share {
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
 export PS1
+
+# Initialize RVM (Ruby) if it exists
+if [ -d "/opt/rvm/" ]; then
+    export PATH="$PATH:/opt/rvm/bin"
+    [[ -s "/opt/rvm/scripts/rvm" ]] && source "/opt/rvm/scripts/rvm"
+fi
