@@ -7,11 +7,6 @@ if [ `uname` = "Linux" ]; then
     alias gmailxmpp='~/.mcabber/log.sh gmail'
 fi
 
-alias gr='grep -Ir'
-alias gri='grep -Iir'
-alias acat='adb logcat -C -v time -s'
-alias prettyprint_json='python -m json.tool'
-
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
 }
@@ -26,6 +21,30 @@ function mount_protected_cifs_share {
         ls -l /media/$USER/$1/
     fi
 }
+
+function find_git_home {
+    git rev-parse --show-toplevel 2> /dev/null
+}
+
+function activate_venv {
+    venv_home=$(find_git_home)
+    if [ $? != 0 ]; then
+        venv_home=$(pwd)
+    fi
+    pushd $venv_home
+    source venv/bin/activate
+    popd
+}
+
+function go_to_git_home {
+    cd $(find_git_home)
+}
+
+alias acat='adb logcat -C -v time -s'
+alias gh='go_to_git_home'
+alias gr='grep -Ir'
+alias gri='grep -Iir'
+alias prettyprint_json='python -m json.tool'
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
 export PS1
