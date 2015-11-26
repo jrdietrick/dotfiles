@@ -40,6 +40,22 @@ function go_to_git_home {
     cd $(find_git_home)
 }
 
+function g2fa {
+    if [ $1 = "gmail" ]; then
+        code=`cat ~/.ssh/google_backup_codes_j.r.dietrick@gmail.com | head -n 1`
+        echo $code
+        echo $code | xsel -i -b
+        sed "1d" -i ~/.ssh/google_backup_codes_j.r.dietrick@gmail.com
+    elif [ $1 = "gather" ]; then
+        code=`cat ~/.ssh/google_backup_codes_john@gatherhealth.com | head -n 1`
+        echo $code
+        echo $code | xsel -i -b
+        sed "1d" -i ~/.ssh/google_backup_codes_john@gatherhealth.com
+    fi
+}
+
+alias 2fa_gather='g2fa gather'
+alias 2fa_personal='g2fa gmail'
 alias acat='adb logcat -C -v time -s'
 alias gh='go_to_git_home'
 alias gr='grep -Ir'
