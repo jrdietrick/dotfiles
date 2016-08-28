@@ -15,6 +15,7 @@
 	lg = !"git lg1"
 	fap = fetch --all --prune
 	fpush = push --force-with-lease
+	lum = !"git status --porcelain | grep '^UU' | awk '{ print $2 }'"
 [push]
 	default = simple
 [core]

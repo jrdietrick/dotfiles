@@ -11,7 +11,7 @@ set incsearch
 
 set list listchars=tab:→\ ,trail:·                          " Show unwanted whitespace
 
-autocmd BufWritePre *.py,*.java,*.cpp,*.c :%s/\s\+$//e      " Trim unwanted whitespace on save
+" autocmd BufWritePre *.py,*.java,*.cpp,*.c :%s/\s\+$//e      " Trim unwanted whitespace on save
 
 colors evening
 hi Normal ctermbg=none
