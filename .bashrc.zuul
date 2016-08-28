@@ -1,0 +1,26 @@
+function g2fa {
+    if [ $1 = "gmail" ]; then
+        code=`cat ~/.ssh/google_backup_codes_j.r.dietrick@gmail.com | head -n 1`
+        echo $code
+        echo $code | xsel -i -b
+        sed "1d" -i ~/.ssh/google_backup_codes_j.r.dietrick@gmail.com
+    elif [ $1 = "gather" ]; then
+        code=`cat ~/.ssh/google_backup_codes_john@gatherhealth.com | head -n 1`
+        echo $code
+        echo $code | xsel -i -b
+        sed "1d" -i ~/.ssh/google_backup_codes_john@gatherhealth.com
+    fi
+}
+
+function mount_protected_cifs_share {
+    sudo mount.cifs //192.168.0.99/$1/ /media/$USER/$1/ -o "username=$USER,uid=$UID,gid=$UID,file_mode=0600,dir_mode=0700,iocharset=utf8,nounix"
+    if [ $? = 0 ]; then
+        ls -l /media/$USER/$1/
+    fi
+}
+
+alias 2fa_gather='g2fa gather'
+alias 2fa_personal='g2fa gmail'
+alias git='LC_ALL=en_US.utf8 git'
+alias gatherxmpp='~/.mcabber/log.sh gather'
+alias gmailxmpp='~/.mcabber/log.sh gmail'
