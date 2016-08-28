@@ -1,3 +1,9 @@
+ANDROID_SDK=/opt/android-sdk
+ANDROID_PLATFORM_TOOLS=$ANDROID_SDK/platform-tools
+ANDROID_TOOLS=$ANDROID_SDK/tools
+
+PATH=$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS
+
 function g2fa {
     if [ $1 = "gmail" ]; then
         code=`cat ~/.ssh/google_backup_codes_j.r.dietrick@gmail.com | head -n 1`
@@ -19,8 +25,23 @@ function mount_protected_cifs_share {
     fi
 }
 
+function restart_adb {
+    sudo $ANDROID_PLATFORM_TOOLS/adb kill-server
+    sudo $ANDROID_PLATFORM_TOOLS/adb start-server
+}
+
+function boilerplate_Makefile {
+    if [ -e "./Makefile" ]; then
+        echo 'Refusing to clobber existing file.'
+        return
+    fi
+    cat $HOME/.boilerplate/Makefile | sed "s/XXX_TARGET_NAME_XXX/"$1"/g" > ./Makefile
+}
+
 alias 2fa_gather='g2fa gather'
 alias 2fa_personal='g2fa gmail'
 alias git='LC_ALL=en_US.utf8 git'
 alias gatherxmpp='~/.mcabber/log.sh gather'
 alias gmailxmpp='~/.mcabber/log.sh gmail'
+alias locale_english='export LC_ALL=en_US.utf8'
+alias wifi_autoconnect='sudo ifconfig wlan0 up && sudo wifi autoconnect'

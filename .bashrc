@@ -1,8 +1,6 @@
-PATH=$PATH:$HOME/bin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
-export PATH
+PATH=$PATH:$HOME/bin
 
 NUM_CORES=`cat /proc/cpuinfo | grep -E "^processor\\s+:\\s+[0-9]+$" | wc -l`
-export NUM_CORES
 
 function parse_git_dirty {
     [[ $(git status --porcelain 2> /dev/null | tail -n1) != "" ]] && echo "+"
