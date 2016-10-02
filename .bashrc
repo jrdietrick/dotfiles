@@ -71,6 +71,3 @@ fi
 
 # Caps lock is the worst
 xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L" > /dev/null 2>&1
-
-# Pull in host-specific RC
-source $HOME/.bashrc.$HOSTNAME > /dev/null 2>&1

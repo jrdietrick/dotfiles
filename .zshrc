@@ -13,6 +13,9 @@ export HOSTNAME=$(hostname -s)
 # Bash-compatible baseline
 source $HOME/.bashrc > /dev/null 2>&1
 
+# Bring in host-specific stuff
+source $HOME/.zshrc.$HOSTNAME > /dev/null 2>&1
+
 source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
