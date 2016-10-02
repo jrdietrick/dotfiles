@@ -7,7 +7,7 @@ function parse_git_dirty {
 }
 
 function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/@\1$(parse_git_dirty)/"
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
 function find_git_home {
@@ -64,13 +64,9 @@ alias ll='ls -l'
 alias ost='open_indexed_file_in_sublime_text'
 alias prettyprint_json='python -m json.tool'
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
-export PS1
-
-# Initialize RVM (Ruby) if it exists
-if [ -d "/opt/rvm/" ]; then
-    export PATH="$PATH:/opt/rvm/bin"
-    [[ -s "/opt/rvm/scripts/rvm" ]] && source "/opt/rvm/scripts/rvm"
+if [ ! -z "$BASH" ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
+    export PS1
 fi
 
 # Caps lock is the worst

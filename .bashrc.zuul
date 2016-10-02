@@ -45,3 +45,11 @@ alias gatherxmpp='~/.mcabber/log.sh gather'
 alias gmailxmpp='~/.mcabber/log.sh gmail'
 alias locale_english='export LC_ALL=en_US.utf8'
 alias wifi_autoconnect='sudo ifconfig wlan0 up && sudo wifi autoconnect'
+
+if [ ! -z "$BASH" ]; then
+    # Initialize RVM (Ruby) if it exists
+    if [ -d "/opt/rvm/" ]; then
+        export PATH="$PATH:/opt/rvm/bin"
+        [[ -s "/opt/rvm/scripts/rvm" ]] && source "/opt/rvm/scripts/rvm"
+    fi
+fi
