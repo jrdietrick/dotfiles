@@ -65,7 +65,7 @@ alias ost='open_indexed_file_in_sublime_text'
 alias prettyprint_json='python -m json.tool'
 
 if [ ! -z "$BASH" ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w\[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[1;34m\]\w \[\033[1;33m\]$(parse_git_branch)\[\033[1;34m\]$\[\033[00m\] '
     export PS1
 fi
 
