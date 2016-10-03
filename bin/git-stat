@@ -1,0 +1,31 @@
+#!/usr/bin/zsh
+
+function git_svn_describe {
+    git_home=$(git rev-parse --show-toplevel 2> /dev/null)
+    if [ $? != 0 ]; then
+        return 1
+    fi
+    svn_head="git-svn"
+    git describe --all $svn_head > /dev/null 2>&1
+    if [ $? != 0 ]; then
+        svn_head="master"
+    fi
+    common_ancestor=$(git merge-base $svn_head HEAD)
+    svn_rev=$(git svn find-rev $common_ancestor)
+    if [ -z "$svn_rev" ]; then
+        return 0
+    fi
+    commits_ahead=$(git rev-list --count $common_ancestor...HEAD)
+    dirty_raw=$(git status --porcelain 2> /dev/null | wc -l)
+    dirty_string=""
+    if [[ ! $dirty_raw -eq 0 ]]; then
+        dirty_string=" (and dirty)"
+    fi
+    green_bold=$(tput setaf 2)$(tput bold)
+    reset=$(tput sgr0)
+    echo ""
+    echo "$commits_ahead commits ahead of r$green_bold$svn_rev$reset$dirty_string."
+    echo ""
+}
+
+git status && git_svn_describe
