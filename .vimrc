@@ -9,6 +9,8 @@ set shiftwidth=4                                            " 4 spaces when shif
 set hlsearch                                                " Highlight and jump when searching
 set incsearch
 
+set colorcolumn=81
+
 set list listchars=tab:→\ ,trail:·                          " Show unwanted whitespace
 
 " autocmd BufWritePre *.py,*.java,*.cpp,*.c :%s/\s\+$//e      " Trim unwanted whitespace on save

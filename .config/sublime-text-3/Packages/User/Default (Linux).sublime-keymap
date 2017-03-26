@@ -2,5 +2,6 @@
     { "keys": ["super+`"], "command": "toggle_distraction_free" },
     { "keys": ["super+z"], "command": "goto_definition" },
     { "keys": ["ctrl+shift+`"], "command": "clone_file" },
-    { "keys": ["ctrl+alt+m"], "command": "toggle_menu"}
+    { "keys": ["ctrl+alt+m"], "command": "toggle_menu" },
+    { "keys": ["ctrl+shift+w"], "command": "close_all" },
 ]
